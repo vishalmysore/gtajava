@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+    <head>
+        <script type="text/javascript" src="dojo/dojo.js" djConfig="parseOnLoad:true">
+        </script>
+        <script>
+            
+            
+            dojo.require("dojox.data.AppStore");
+            dojo.require("dijit.form.Button");
+            dojo.require("dojox.data.GoogleFeedStore");
+            dojo.require("dojo.dnd.Source");
+              function helloPressed(v){
+                        alert(v.innerHTML);
+                    }
+            //This function performs some basic dojo initialization and will do the fetch calling for this example
+            function initSimple(){
+                var appStore = new dojox.data.AppStore({
+                    url: "http://localhost:8080/NewTomcat5Project/MyFeed.xml"
+                });
+                
+                dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function(){
+                
+                  
+                    function gotEntries(items, request){
+                        if (items) {
+                            //Got the items, lets attach in the results (title, date updated).
+                            var wishlist = new dojo.dnd.Source("wishlistNode");
+                            for (i = 0; i < items.length; i++) {
+                            
+                                var e = items[i];
+                                
+                                var title = appStore.getValue(e, "title");
+                                var updated = appStore.getValue(e, "updated");
+                                var summary = appStore.getValue(e, "summary");
+                                var link = appStore.getValue(e, "link");
+								
+								
+                                var maindiv = dojo.doc.createElement("div");
+                              //  maindiv.id = dojo.dnd.getUniqueId();
+                                dojo.attr(maindiv, {
+                                    id: "bar",
+									onclick : "helloPressed(this)"
+                                });
+                              
+                                
+                                
+                                var div = dojo.create("div");
+                                dojo.style(div, {
+                                    "opacity": 0.5,
+                                    "border": "3px solid black",
+                                    "backgroundColor": "grey"
+                                
+                                });
+                                div.innerHTML = title;
+								
+								
+                                
+								var div2 = dojo.create("div");
+                                dojo.style(div2, {
+                                    "visibility": "hidden",
+									 "height" : "1px",
+									 "width": "1px"
+                                
+                                });
+                                div2.innerHTML = link.href;
+								dojo.attr(div2, {
+                                    name: "nameLink"
+									
+                                });
+								
+								
+                                var div1 = dojo.create("div");
+                                dojo.style(div1, {
+                                    "visibility": "hidden",
+									 "height" : "1px",
+									 "width": "1px"
+                                
+                                });
+                                div1.innerHTML = summary +"<br>"+title;
+								dojo.attr(div1, {
+                                    name: "nameDes"
+									
+                                });
+								
+								
+                                
+                                dojo.place(div, maindiv);
+                                dojo.place(div1, maindiv);
+								dojo.place(div2, maindiv);
+								
+                                wishlist.insertNodes(false, [maindiv]);
+                                
+                                
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                    appStore.fetch({
+                        onComplete: gotEntries
+                    });
+                });
+            }
+            
+            //Set the init function to run when dojo loading and page parsing has completed.
+            dojo.addOnLoad(initSimple);
+            
+            function callMe(){
+                var store1 = new dojox.data.GoogleFeedStore();
+                store1.fetch({
+                    query: {
+                        url: "http://www.workopolis.com/rss.aspx?action=transfer&view=content/jobseeker/jobsearchviewrss&id=61810298"
+                    },
+                    onComplete: function(items1){
+                        var wishlist = new dojo.dnd.Source("wishlistNode");
+                        for (i = 0; i < items1.length; i++) {
+                            var e1 = items1[i];
+                            var v = store1.getValue(e1, "title");
+                            var div = dojo.doc.createElement("div");
+                            div.innerHTML = v;
+                            source.insertNodes(false, [div]);
+                            
+                        }
+                        
+                    },
+                    count: 10
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div dojoType="dijit.form.Button" id="simpleFetchButton">
+            local
+        </div>
+        <div dojoType="dijit.form.Button" id="12dd" onclick="callMe()">
+           Google
+        </div>
+        <br>
+        <br>
+        <span id="list"></span>
+        <div id="wishlistNode">
+        </div>
+    </body>
+</html>

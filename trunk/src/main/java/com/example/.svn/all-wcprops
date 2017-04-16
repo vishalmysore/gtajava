@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/src/main/java/com/example
+END
+EmailServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2/trunk/src/main/java/com/example/EmailServlet.java
+END
+HTMLDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/src/main/java/com/example/HTMLDataSource.java
+END
+ChatService.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/src/main/java/com/example/ChatService.java
+END
+EmailWorker.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/src/main/java/com/example/EmailWorker.java
+END
+MyJobs.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/src/main/java/com/example/MyJobs.java
+END
+SyncMailServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/src/main/java/com/example/SyncMailServlet.java
+END
+CometdDemoServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/src/main/java/com/example/CometdDemoServlet.java
+END
+TempJSPPageBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/src/main/java/com/example/TempJSPPageBean.java
+END

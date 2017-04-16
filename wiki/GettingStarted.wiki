@@ -1,0 +1,8 @@
+#steps to run the war
+
+
+
+= Check out the source code =
+= Edit run.bat and set Java_home and Maven_home =
+= Run run.bat =
+= connect to http://localhost:8080/gtajava/index.jsp =

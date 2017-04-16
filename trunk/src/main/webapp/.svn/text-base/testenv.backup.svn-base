@@ -1,0 +1,88 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.sql.DataSource"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.gtajava.mail.GtaJavaMailerMessage"%>
+<%@page import="javax.mail.Message"%>
+<%@page import="javax.mail.internet.InternetAddress"%>
+<%@page import="javax.mail.Transport"%>
+<%@page import="javax.activation.DataHandler"%>
+
+<%@page import="com.example.HTMLDataSource"%><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+ 
+ InitialContext ic = new InitialContext();
+ DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/gtajava");
+ Connection c = ds.getConnection();
+ System.out.print(""+c.isReadOnly());
+ try {
+	 
+	 Message m = GtaJavaMailerMessage.getMailMessage();
+	 Message message = GtaJavaMailerMessage.getMailMessage();		
+	 message.addRecipient(Message.RecipientType.TO, new InternetAddress("visrow@gmail.com"));		
+		message.setSubject("test");		
+		String sb = "<html>hi</html>";
+		//message.setDataHandler(new DataHandler(new ByteArrayDataSource(sb
+			//	.toString(), "text/html")));
+		message.setDataHandler(new DataHandler(new HTMLDataSource(sb.toString())));
+		// Send message
+		Transport.send(message);
+
+	 
+     // Create a result set containing all data from my_table
+     Statement stmt = c.createStatement();
+     
+     
+     
+     String sql = "CREATE TABLE mysql_test_table("
+         + "col_string        VARCHAR(254), "      // String
+         + "col_string1       VARCHAR(254))";              // Blob (< 2^16 bytes)
+         out.println(" table created ");
+     stmt.executeUpdate(sql);
+     out.println("<br>");  
+     String sqlInsert = "INSERT INTO mysql_test_table (col_string,col_string1) VALUES('test','test')";
+     
+     // Execute the insert statement
+     stmt.executeUpdate(sqlInsert);
+     out.println(" date now is "+(new Date()));
+     out.println("</br>");    
+         
+     ResultSet rs = stmt.executeQuery("SELECT * FROM mysql_test_table");
+  // Fetch each row from the result set
+     while (rs.next()) {
+         // Get the data from the row using the column index
+         //String s = rs.getString(2);
+ 
+         // Get the data from the row using the column name
+        String s = rs.getString("col_string");
+         out.println(s);
+         out.println("<br>");  
+         s = rs.getString("col_string1");
+         out.println(s);
+         out.println("<br>");  
+         
+      out.println("dropping table "+stmt.execute("DROP TABLE mysql_test_table")); 
+      out.println("<br>");  
+     }
+ } catch (SQLException e) {
+ }
+
+ c.close();
+ %>
+ 
+ <%= request.getRemoteAddr() %>
+
+</body>
+</html>

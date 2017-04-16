@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Monster Job Search Results </title>
+    <description>RSS Feed for Monster Job Search</description>
+    <link>http://rss.jobsearch.monster.com/rssquery.ashx?WT.mc_n=RSS2005_jsr&amp;fn=6&amp;cy=US&amp;baseurl=jobsearch.monster.com</link>
+    <image>
+      <title>Monster Job Search Results </title>
+      <url>http://media.monster.com/mm/usen/my/144x30_monsterBug.gif</url>
+      <link>http://rss.jobsearch.monster.com/rssquery.ashx?WT.mc_n=RSS2005_jsr&amp;fn=6&amp;cy=US&amp;baseurl=jobsearch.monster.com</link>
+      <width>144</width>
+      <height>30</height>
+    </image>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2005 Monster. All Rights Reserved</copyright>
+    <webMaster>RssJobSearch@monster.com</webMaster>
+    <pubDate>Wed, 18 Nov 2009 14:40:53 GMT</pubDate>
+    <docs>http://backend.userland.com/rss</docs>
+    <generator>RSS.NET: http://www.rssdotnet.com/</generator>
+    <item>
+      <title>***Network Administrator – 60K – 120K***</title>
+      <description>MA-Needham,  The Hive is a virtual organization. We log in from our homes, a nearby office, one of our global office locations, or wherever we have an internet connection. The nature of this position, however, requires an on-site presence at our facility in Somerville, MA. Who We Are: The Hive is an organization of developers and engineers who are excited about the ever-changing world of software and technolog</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=48888894&amp;AVSDM=2009-10-29 16:42:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">48888894</guid>
+      <pubDate>Thu, 29 Oct 2009 16:41:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Programmer/Developer</title>
+      <description>AL-Daleville,  Programmer will work with a high degree of independence to develop web-based applications, database applications, web sites and other custom software programs for government and commercial clients. Programmer will also develop programs and support systems for in-house use and is expected to conduct system analysis and development, with limited support and direction from professional staff, to keep</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=55477778&amp;AVSDM=2009-10-23 14:27:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">55477778</guid>
+      <pubDate>Fri, 23 Oct 2009 14:26:56 GMT</pubDate>
+    </item>
+    <item>
+      <title>Junior Support Analyst</title>
+      <description>NJ-Mendham,  Company Description: Timewatch ® specializes in Professional Services Software, performing time recording, project, and expense management as well as resource scheduling. (visit our website for more information ) Job Role: We are looking for a keen, intelligent individual, to work within our product services team to assist Customers in their day-to-day use of our products; providing product suppor</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=83999175&amp;AVSDM=2009-11-05 10:43:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">83999175</guid>
+      <pubDate>Thu, 15 Oct 2009 17:33:54 GMT</pubDate>
+    </item>
+    <item>
+      <title>Technical Support Engineer</title>
+      <description>CA-Silicon Valley/San Jose,  Technical Support Engineer Job Code: TSE091014 Summary of Duties: Certify Data Systems is looking for a strongly motivated Technical Support Engineer. The Technical Support Engineer will serve as the escalation point of contact for customer calls relating to all new and existing products. It will include both coordinating call notification and reporting in addition to providing detailed problem do</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=65217558&amp;AVSDM=2009-11-05 10:43:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">65217558</guid>
+      <pubDate>Thu, 15 Oct 2009 15:06:43 GMT</pubDate>
+    </item>
+    <item>
+      <title>.Net Developer</title>
+      <description>TX-San Antonio,  Established software application development company is seeking experienced .net developers. Great company with excellent growth potential is developing a new line of products in the .net environment. The Role You will work on every aspect of technical development, from design, development, testing through to deployment. You will have development experience of 4+ years and at least 3 years C# web-</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=61487188&amp;AVSDM=2009-10-08 11:44:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">61487188</guid>
+      <pubDate>Thu, 08 Oct 2009 11:43:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>Software Engineer</title>
+      <description>CT-Ridgefield,  Rapidly expanding software company in Ridgefield , Ct. is the market-leader in relocation management technology. Our client portfolio spans the globe and includes Fortune 50 companies and Big Four audit firms. We seek a Microsoft applications engineer with very high-level technical abilities to design and develop new software functionality. This unique position offers the opportunity for substanti</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=83744373&amp;AVSDM=2009-10-02 10:23:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">83744373</guid>
+      <pubDate>Fri, 02 Oct 2009 10:23:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>Chicago Trading Firms seeking OO Software Developers Sought (Java or C++ or C#)</title>
+      <description>IL-Chicago,  Our Trading clients are ALWAYS looking for highly motivated and talented individuals to join our fast-paced development team and help deliver the best TRADING systems. As a software developer, you would be responsible for doing test-first development of software components in multiple layers including the user interface, business domain, and data access. You would also be responsible for maintaini</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=51944825&amp;AVSDM=2009-09-25 19:33:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">51944825</guid>
+      <pubDate>Fri, 25 Sep 2009 19:33:23 GMT</pubDate>
+    </item>
+    <item>
+      <title>C# Asp.Net developer</title>
+      <description>MN-Plymouth,  Definition This individual should have at least 5+ years of software development experience, possess excellent communication and interpersonal skills, and should be familiar with coding best practices as well as advanced software concepts. Typical expectations would be designing, coding, mentoring junior developers, and leadership tendencies. Qualifications Looking for an individual with excellent</description>
+      <link>http://jobsearch.monster.com/getjob.asp?JobID=66268358&amp;AVSDM=2009-09-25 09:08:00&amp;WT.mc_n=RSS2005_JSR</link>
+      <guid isPermaLink="False">66268358</guid>
+      <pubDate>Thu, 24 Sep 2009 15:26:26 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

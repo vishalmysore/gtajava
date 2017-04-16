@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Insert title here</title>
+        <script type="text/javascript" src="dojo/dojo.js" djConfig="parseOnLoad:true">
+        </script>
+        <script src="gtajavascript.js">
+        </script>
+        <script>
+            
+            function attachItemsToNode(divId, appStore, items,local,feedId){
+                
+                var wishlist = new dojo.dnd.Source(divId);
+			
+				for (i = 0; i < items.length; i++) {
+                
+                    var e = items[i];
+                       
+                    var title = appStore.getValue(e, "title");
+                    var description = appStore.getValue(e, "content");
+					var updated = appStore.getValue(e, "updated");
+                    var summary = appStore.getValue(e, "summary");
+                    var link = appStore.getValue(e, "link");
+                   
+                    
+                    var maindiv = dojo.doc.createElement("div");
+				//	 alert(local+" here");
+                    //  maindiv.id = dojo.dnd.getUniqueId();
+                    dojo.attr(maindiv, {
+                        id: feedId,
+                        onclick: "showJobDetails(this)"
+                    });
+					// alert(local+" here222");
+                    dojo.style(maindiv, {
+                        "backgroundColor": "grey"
+                    
+                    });
+                    
+                   //  alert(local+" here1");
+                    var div = dojo.create("div");
+                    
+                    div.innerHTML = title;
+                    
+                    
+                    
+                    var div2 = dojo.create("div");
+                    dojo.style(div2, {
+                        "visibility": "hidden",
+                        "height": "1px",
+                        "width": "1px"
+                    
+                    });
+					if (local == "true") {
+					//	alert(local+" here2");
+						div2.innerHTML = link.href;
+					}else {
+						//alert(link);
+						div2.innerHTML = link;
+					}
+					
+                    dojo.attr(div2, {
+                        name: "nameLink"
+                    
+                    });
+                    
+                    
+                    var div1 = dojo.create("div");
+                    dojo.style(div1, {
+                        "visibility": "hidden",
+                        "height": "1px",
+                        "width": "1px"
+                    
+                    });
+                    div1.innerHTML = summary + "<br>" + title;
+                    dojo.attr(div1, {
+                        name: "nameDes"
+                    
+                    });
+                    
+                    
+                    
+                    dojo.place(div, maindiv);
+                    dojo.place(div1, maindiv);
+                    dojo.place(div2, maindiv);
+                    var br = dojo.doc.createElement("br");
+                    wishlist.insertNodes(false, [maindiv]);
+                    wishlist.insertNodes(false, [br]);
+                    
+                    
+                }
+            }
+            
+            function fetch(feedId, urlStr, local, divId){
+            
+                if (local == "true") {
+                
+                    var appStore = new dojox.data.AppStore({
+                        url: urlStr
+                    });
+                    
+                    
+                    var gotEntries = function(items, request){
+                        if (items) {
+                            attachItemsToNode(divId, appStore, items,local),feedId;
+                            
+                            
+                        }
+                    }
+                    
+                    
+                    
+                    
+                    
+                    appStore.fetch({
+                        onComplete: gotEntries
+                    });
+                    
+                }
+                else {
+					
+                    var store1 = new dojox.data.GoogleFeedStore();
+                    store1.fetch({
+                        query: {
+                            url: urlStr
+                        },
+                        onComplete: function(items1){
+							
+                            attachItemsToNode(divId, store1, items1,local,feedId);
+                            
+                            
+                            
+                        },
+                        count: 10
+                    });
+                }
+                
+                
+                
+            }
+        </script>
+    </head>
+    <body onload="fetch('URL1','http://www.workopolis.com/rss.aspx?action=transfer&view=content/jobseeker/jobsearchviewrss&id=61810298','false','wishlistNode')">
+        <div id="wishlistNode">
+        </div>
+		
+    </body>
+</html>

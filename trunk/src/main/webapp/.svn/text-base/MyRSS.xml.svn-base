@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" >  
+ 
+<channel>  
+<atom:link href="http://www.interactive-mix.com/feed.xml" rel="self" type="application/rss+xml" />  
+<title>Digital 11 Marketing Agency Interactive Mix, Make Digital Marketing Work</title>  
+<description>Interactive Mix is a London Digital Marketing agency providing strategy and a framework to guarantee successful marketing results using digital media</description>  
+<link>http://www.interactive-mix.com</link>  
+ 
+<item>  
+<title>Digital 22 Marketing Strategy of the Interactive Mix</title>  
+<description>What makes us different is that we offer an over arching strategy. We analyse the results to ensure optimum levels are maintained. It is this strategic approach that enables us to bring real value to your business</description>  
+<link>http://localhost:8080/NewTomcat5Project/test.html</link>  
+<guid ispermalink="true">http://localhost:8080/NewTomcat5Project/test.html</guid>  
+</item>  
+ 
+<item>  
+<title>title 2</title>  
+<description>This is 2nd job us different is that we offer an over arching strategy. We analyse the results to ensure optimum levels are maintained. It is this strategic approach that enables us to bring real value to your business</description>  
+<link>http://localhost:8080/NewTomcat5Project/test1.html</link>  
+<guid ispermalink="true">http://localhost:8080/NewTomcat5Project/test1.html</guid>  
+</item>   
+</channel>  
+</rss>
